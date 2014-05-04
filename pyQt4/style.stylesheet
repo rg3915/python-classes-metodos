@@ -1,0 +1,5 @@
+Botao {
+	color: #ffffff;
+	background-color: #428BCA; 
+	display: inline-block;
+}
