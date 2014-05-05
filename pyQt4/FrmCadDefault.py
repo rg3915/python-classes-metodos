@@ -10,7 +10,7 @@ class FrmCadDefault(Widget):
 
 	def frmCadDefaultCreate(self):
 		self.setWindowTitle(u'Cadastro padrão')
-		# self.center()
+		self.centerOnScreen()
 		self.layoutPrincipal=LayoutVertical()
 
 		self.txtCodigo=TextBox(self)
@@ -46,11 +46,10 @@ class FrmCadDefault(Widget):
 
 		self.setLayout(self.layoutPrincipal)
 
-	# def center(self):
-	# 	qr=self.frameGeometry()
-	# 	cp=QtGui.QDesktopWidget().availableGeometry().center()
-	# 	qr.moveCenter(cp)
-	# 	self.move(qr.topLeft())
+	def centerOnScreen(self):
+		resolucao=QDesktopWidget().screenGeometry()
+		self.move((resolucao.width()/2)-(self.frameSize().width()/2),
+				   (resolucao.height()/2)-(self.frameSize().height()/2))
 
 if __name__ == '__main__':
 	import sys

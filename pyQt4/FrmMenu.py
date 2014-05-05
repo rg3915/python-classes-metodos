@@ -14,6 +14,7 @@ class FrmMenu(Widget):
 
 	def frmMenu(self):
 		self.setWindowTitle('Menu principal')
+		#self.centerOnScreen()
 		self.resize(400,300)		
 		self.layoutPrincipal=LayoutVertical()
 
