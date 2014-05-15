@@ -3,6 +3,7 @@ from FrmCadDefault import FrmCadDefault
 from FrmPesquisaCliente import FrmPesquisaCliente
 from PyQt4.QtGui import QApplication
 from base import *
+from Db import Db, ClientesDb
 
 class FrmCadCliente(FrmCadDefault):
 
@@ -13,6 +14,8 @@ class FrmCadCliente(FrmCadDefault):
 
 		# abre o formulario FrmPesquisaCliente
 		self.btnPesquisar.clicked.connect(self.AbrePesquisa)
+		self.btnSalvar.clicked.connect(self.Salvar)
+		self.btnExcluir.clicked.connect(self.__Excluir)
 
 		# imprimir
 		self.btnImprimir.clicked.connect(self.Imprimir)
@@ -47,6 +50,38 @@ class FrmCadCliente(FrmCadDefault):
 	def Imprimir(self):
 		print self.txtNome.text()
 		print self.txtCPF.text()
+
+	def Salvar(self):
+		try:
+			#capturando os dados da tela
+			Codigo = self.txtCodigo.text()
+			Nome = self.txtNome.text()
+			CPF = self.txtCPF.text()
+			Email = self.txtEmail.text()
+			Fone = self.txtFone.text()
+			UF = str(self.txtUF.text()).upper()
+
+			if Codigo == '':
+				self.__inserir(Codigo, Nome, CPF, Email, Fone, UF)
+				msg = MessageBox()
+				msg.information(self, 'Cadastro de clientes', 'Cliente salvo com sucesso!', MessageBox.Ok)
+			else:
+				pass
+		except Exception, e:
+			msg = MessageBox()
+			msg.critical(self, 'Cadastro de clientes', 	'Ocorreu o seguinte erro ao tentar inserir o cliente: \n ' + str(e), MessageBox.Ok)
+
+	def __inserir(self, id, cpf, nome, email, fone, uf):
+		'''Método cria um objeto cliente do modulo de acesso a dados, e inclui um novo cliente no banco'''
+		self.clientedb.Salvar(id, cpf, nome, email, fone, uf)
+
+	def __Excluir(self, pId):
+		try:
+			codigo = int(self.txtCodigo.text())
+			self.clientedb.Excluir(codigo)
+		except Exception, e:
+			msg = MessageBox()
+			msg.critical(self, 'Cadastro de clientes', 'Ocorreu o seguinte erro ao tentar excluir: \n ' + str(e).decode('utf8', MessageBox.Ok)
 
 if __name__ == '__main__':
 	import sys

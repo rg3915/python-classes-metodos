@@ -72,3 +72,9 @@ class Grid(QTableWidget):
 		self.resizeRowsToContents()
 		self.setAlternatingRowColors(True)
 		self.setSortingEnabled(True)
+		self.setSelectionBehavior(QAbstractItemView.SelectRows)
+
+class MessageBox(QMessageBox):
+
+	def __init__(self, parent=None):
+		super(MessageBox, self).__init__(parent)

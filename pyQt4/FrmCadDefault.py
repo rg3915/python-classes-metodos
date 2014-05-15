@@ -47,9 +47,9 @@ class FrmCadDefault(Widget):
 		self.setLayout(self.layoutPrincipal)
 
 	def centerOnScreen(self):
-		resolucao=QDesktopWidget().screenGeometry()
-		self.move((resolucao.width()/2)-(self.frameSize().width()/2),
-				   (resolucao.height()/2)-(self.frameSize().height()/2))
+		resolucao = QDesktopWidget().screenGeometry()
+		self.move((resolucao.width()/2) - (self.frameSize().width()/2),
+				   (resolucao.height()/2) - (self.frameSize().height()/2))
 
 if __name__ == '__main__':
 	import sys
