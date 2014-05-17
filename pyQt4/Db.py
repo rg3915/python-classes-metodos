@@ -8,7 +8,7 @@ class Db(object):
 	cursor = cursor para execução de instruções sql
 	'''
 	def __init__(self):
-		self.conn = sqlite3.connect('video_aula.db')
+		self.conn = sqlite3.connect('Clientes.db')
 		self.cursor = self.conn.cursor()
 
 
