@@ -32,6 +32,7 @@ class FrmCadDefault(Widget):
 		# Botoes
 		self.btnNovo=Botao('&Novo',self)
 		self.btnSalvar=Botao('&Salvar',self)
+		self.btnExcluir=Botao('&Excluir',self)
 		self.btnPesquisar=Botao('&Pesquisar',self)
 		self.btnImprimir=Botao('&Imprimir',self)
 
@@ -39,6 +40,7 @@ class FrmCadDefault(Widget):
 		hboxBotoes.addStretch(2)
 		hboxBotoes.addWidget(self.btnNovo)
 		hboxBotoes.addWidget(self.btnSalvar)
+		hboxBotoes.addWidget(self.btnExcluir)
 		hboxBotoes.addWidget(self.btnPesquisar)
 		hboxBotoes.addWidget(self.btnImprimir)
 
