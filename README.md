@@ -8,6 +8,8 @@ Estou seguindo os videos [Python+PySide (Español)][4] by [Alex Dzul][5], e [Int
 
 Uma aplicação interessante que está funcionando no momento (03/05/14) é o FrmCadCliente.py.
 
+A pasta pythonBasico contém conteúdos Python com uma introdução básica sobre determinados assuntos, como uso de classes e métodos.
+
 [0]: http://www.python.org.br/wiki/PyQt
 [1]: http://qt-project.org/wiki/PySide
 [2]: http://qt-project.org/downloads#qt-lib
