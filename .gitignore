@@ -1,3 +1,10 @@
 .Python
 *.pyc
 *~
+*.db
+
+bin/
+include/
+lib/
+local/
+__pycache__

@@ -10,8 +10,6 @@ Uma aplicação interessante que está funcionando no momento (03/05/14) é o Fr
 
 A pasta **pythonBasico** possui conteúdos Python com uma introdução básica sobre determinados assuntos, como uso de classes e métodos.
 
-A pasta **pythonSQLite** possui conteúdos sobre a manipulação de banco de dados SQLite3 em Python.
-
 [0]: http://www.python.org.br/wiki/PyQt
 [1]: http://qt-project.org/wiki/PySide
 [2]: http://qt-project.org/downloads#qt-lib
