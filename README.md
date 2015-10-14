@@ -6,9 +6,28 @@ No caso, estou usando Linux, portanto instalei o [Qt libraries 4.8.6 for Linux/X
 
 Estou seguindo os videos [Python+PySide (Español)][4] by [Alex Dzul][5], e [Introdução ao desenvolvimento de interfaces gráficas com PyQt][6] by [Jotagê Sales - python][7].
 
-Uma aplicação interessante que está funcionando no momento (03/05/14) é o FrmCadCliente.py.
+Uma aplicação interessante que está funcionando no momento (03/05/14) é o FrmCadCliente.py e FrmMenu.py.
 
 A pasta **pythonBasico** possui conteúdos Python com uma introdução básica sobre determinados assuntos, como uso de classes e métodos.
+
+## pyQt4
+
+Entre na pasta pyQt4 e digite
+
+	$ python FrmMenu.py # ou
+	$ make pyqt
+
+
+## PySide
+
+Talvez seja necessário instalar
+
+	$ sudo apt-get install python-pyside
+
+Entre na pasta PySide e digite
+
+	$ python pyside02.py # ou
+	$ make pyside2
 
 [0]: http://www.python.org.br/wiki/PyQt
 [1]: http://qt-project.org/wiki/PySide
