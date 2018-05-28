@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-class User(object):
+class User:
 
     seq = 0
     objects = []

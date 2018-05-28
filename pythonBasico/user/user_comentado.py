@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-class User(object):
+class User:
 
     # Define um atributo que servirá como contador inicial e um atributo objects
     # (tupla vazia) que é uma lista de instâncias de User que foram salvos
